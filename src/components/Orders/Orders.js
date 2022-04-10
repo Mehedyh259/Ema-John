@@ -20,18 +20,20 @@ const Orders = () => {
 
     return (
         <div className='shop-container'>
-            <div className="review-container">
-                {
-                    cart.map((product) => <ReviewItem
-                        key={product.id}
-                        product={product}
-                        handleRemoveProduct={handleRemoveProduct} ></ReviewItem>)
-                }
+            <div className="all-products">
+                <div className="review-container">
+                    {
+                        cart.map((product) => <ReviewItem
+                            key={product.id}
+                            product={product}
+                            handleRemoveProduct={handleRemoveProduct} ></ReviewItem>)
+                    }
+                </div>
             </div>
             <div className="cart-container">
                 <Cart cart={cart}>
 
-                    <button onClick={() => navigate('/inventory')}>review checkout</button>
+                    <button onClick={() => navigate('/shipment')}>Proceed Shipping</button>
 
                 </Cart>
             </div>
