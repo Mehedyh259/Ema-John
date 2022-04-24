@@ -14,7 +14,6 @@ const Shipment = () => {
     const [phone, setPhone] = useState('');
     const [error, setError] = useState('');
 
-    // setEmail(user?.email);
 
     const handleNameBlur = (event) => {
         setName(event.target.value)
@@ -29,7 +28,7 @@ const Shipment = () => {
 
     const handleCreateUser = (event) => {
         event.preventDefault();
-        const shipping = { name, email, address, phone };
+        const shipping = { name, email: user.email, address, phone };
         console.log(shipping);
 
     }
